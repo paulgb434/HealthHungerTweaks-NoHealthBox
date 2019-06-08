@@ -1,0 +1,17 @@
+[
+{
+  "modid": "healthhungertweaks",
+  "name": "Health and Hunger Tweaks",
+  "description": "Modifies the way Minecraft manages food and the corresponding health regeneration",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["CerulanLumina", "66GearHead66"],
+  "credits": "66GearHead66 for help with textures and recipes, squeek502 for AppleCore, Forge for obvious reasons, and any other mod developer that uses open source version control",
+  "logoFile": "",
+  "screenshots": [],
+  "requiredMods": ["AppleCore"],
+  "dependencies": ["AppleCore"]
+}
+]
