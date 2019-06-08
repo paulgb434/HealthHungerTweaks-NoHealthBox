@@ -16,33 +16,12 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import squeek.applecore.api.food.FoodEvent;
 import squeek.applecore.api.hunger.ExhaustionEvent;
-import squeek.applecore.api.hunger.HealthRegenEvent;
 import toughasnails.api.stat.capability.IThirst;
 
 public class HealthHungerHandler {	
 	
 	public HealthHungerHandler() {
 	}
-
-	@SubscribeEvent
-	public void allowNormalRegen(HealthRegenEvent.AllowRegen event) {
-		//event.setResult(Result.DENY);
-		allowRegen(event);
-	}
-	
-	@SubscribeEvent
-	public void allowSaturatedRegen(HealthRegenEvent.AllowSaturatedRegen event) {
-		//event.setResult(Result.DENY);
-		allowRegen(event);
-	}
-	
-	private void allowRegen(HealthRegenEvent event) {
-		if (HealthHungerTweaks.instance.configHandler.shouldDisableRegularRegen()) {
-			event.setResult(Result.DENY);
-		}
-	}
-	
-	// TODO Peaceful config
 	
 	@SubscribeEvent
 	public void getMaxExhaustion(ExhaustionEvent.GetMaxExhaustion event) {
