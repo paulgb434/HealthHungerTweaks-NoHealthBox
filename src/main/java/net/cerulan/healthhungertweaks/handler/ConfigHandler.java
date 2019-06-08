@@ -23,8 +23,6 @@ public class ConfigHandler {
 	private int staticAmount;
 	
 	public void load() {
-		cdX = config.get("client", "cooldownX", 5, "The X Coordinate of the Cooldown Indicator").getInt();
-		cdY = config.get("client", "cooldownY", 5, "The Y Coordinate of the Cooldown Indicator").getInt();
 		screenDarkenWhenInjure = config.get("client", "screenDarken", true, "Whether or not the screen should darken when injured").getBoolean();
 		
 		exhaustionModifier = config.get("exhaustion", "exhaustionModifier", 1.0, "An exhaustion modifier that will be multiplied to the default maximum exhaustion. Higher values mean slower food drain.").getDouble();
@@ -34,7 +32,6 @@ public class ConfigHandler {
 		minimumHunger = config.get("mending", "minimumHunger", 6, "The minimum hunger (in half-shanks) necessary to be able to heal.").getInt();
 		
 		minimumThirst = config.get("mending", "minimumThirst", 6, "ToughAsNails integration: The minimum thirst (in half-drops) necessary to be able to heal. No effect if ToughAsNails is not installed.").getInt();
-		
 		
 		usePercent = config.get("mending", "usePercent", true, "Regeneration will heal for a percent of maximum health, rather that a flat value.").getBoolean();		
 		percentAmount = config.get("mending", "percentAmount", 0.05, "The percent of maximum health to regenerate each regeneration if usePercent is enabled.").getDouble();
